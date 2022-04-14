@@ -15,7 +15,61 @@ p, li {
 }
 
 #inspiration {
-    background-color: #F0F0F0;
     padding-top: 40px;
     padding-bottom: 40px;
+}
+
+
+.pagecontent{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	justify-content: center;
+	height: calc(100vh - 100px)
+}
+
+.pagecontent h2{
+	margin-left: 5%;
+	color: white;
+}
+
+
+.tutorials{
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 25%;
+	background-color: #C9A0DC;
+	opacity: 0.8;
+}
+
+.homework{
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 25%;
+	background-color: #76D7EA;
+	opacity: 0.8;
+}
+
+.lectures{
+	display: flex;
+	flex-direction: column;
+	opacity: 0.8;
+	height: 100%;
+	width: 25%;
+	background-color: #FF8833;
+}
+
+.inspiration{
+	display: flex;
+	flex-direction: column;
+	opacity: 0.8;
+	height: 100%;
+	width: 25%;
+	background-color: #29AB87;
+}
+
+.inspiration ul{
+	padding-right: 17px;
 }
