@@ -1,0 +1,11 @@
+Accesibilty Reflection
+
+For some reason the WAVE tool is not working on my website.
+
+
+Corrections - Aria Labels, alt text for the images, contrast errors betweeen text and background
+
+I think website will not be useable without CSS. Things will be overlapping. UPDATE: I tried and it still works, the iterface is just a bit clunky and you have to scroll for a bit to reach the player.
+
+The site is tabbable.
+
