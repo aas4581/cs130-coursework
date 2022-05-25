@@ -153,6 +153,7 @@ const getArtist = (term) => {
 
 
 const handleTrackClick = (ev) => {
+    document.querySelector('.player').style = 'display: flex'
     const previewUrl = ev.currentTarget.getAttribute('data-preview-track');
 
     const img_url = ev.currentTarget.querySelector('img').getAttribute('src');
