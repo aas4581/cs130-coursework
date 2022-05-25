@@ -111,41 +111,43 @@ const getArtist = (term) => {
 
 
     var data_resp;
-    var name;
+    var name = "";
     var image_url;
     var spotify_url;
     var id;
 
     function myFunc(success) {
-        console.log(data_resp);
 
-        if (!data_resp){
+        try{
+            data_resp = success;
+            id = data_resp[0]['id'];
+            name = data_resp[0]['name'];
+            image_url = data_resp[0]['image_url'];
+            spotify_url = data_resp[0]['spotify_url'];
+
+
+
+            document.querySelector("#artist").innerHTML = 
+            `
+            <section class="artist-card" id=${id}>
+                <div>
+                    <img src=${image_url}>
+                    <h2>${name}</h2>
+                    <div class="footer">
+                        <a href=${spotify_url} target="_blank">
+                            view on spotify
+                        </a>
+                    </div>
+                </div>
+            </section>`;
+            }
+        
+
+        catch{
             document.querySelector("#artist").innerHTML = `No artists found with name ${term}`
         }
-        else {
-
-
-        data_resp = success;
-        id = data_resp[0]['id'];
-        name = data_resp[0]['name'];
-        image_url = data_resp[0]['image_url'];
-        spotify_url = data_resp[0]['spotify_url'];
-
-        document.querySelector("#artist").innerHTML = 
-        `
-        <section class="artist-card" id=${id}>
-            <div>
-                <img src=${image_url}>
-                <h2>${name}</h2>
-                <div class="footer">
-                    <a href=${spotify_url} target="_blank">
-                        view on spotify
-                    </a>
-                </div>
-            </div>
-        </section>`;
-        }
     }
+        
 };
 
 
