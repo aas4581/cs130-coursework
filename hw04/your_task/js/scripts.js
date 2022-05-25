@@ -131,7 +131,7 @@ const getArtist = (term) => {
             `
             <section class="artist-card" id=${id}>
                 <div>
-                    <img src=${image_url}>
+                    <img alt = "image of ${name}" src=${image_url}>
                     <h2>${name}</h2>
                     <div class="footer">
                         <a href=${spotify_url} target="_blank">
