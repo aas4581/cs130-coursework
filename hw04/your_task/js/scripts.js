@@ -50,7 +50,7 @@ const getTracks = (term) => {
     function createtrackhtml(track){
         trackhtml +=
             `<button class="track-item preview" data-preview-track=${track['preview_url']} onclick="handleTrackClick(event);">
-                <img src=${track['album']['image_url']}>
+                <img alt = "image of the album ${track['album']['name']}" src=${track['album']['image_url']}>
                 <i class="fas play-track fa-play" aria-hidden="true"></i>
                 <div class="label">
                     <h2>${track['name']}</h2>
@@ -87,7 +87,7 @@ const getAlbums = (term) => {
         albumshtml +=
         `<section class="album-card" id=${album['id']}>
             <div>
-                <img src=${album['image_url']}>
+                <img alt = "image of the album ${album['name']}" src=${album['image_url']}>
                 <h2>${album['name']}</h2>
                 <div class="footer">
                     <a href=${album['spotify_url']} target="_blank">
@@ -165,7 +165,7 @@ const handleTrackClick = (ev) => {
 
     document.querySelector("#current-track").innerHTML = 
     `<div id="current-track" class="track-item" data-preview-track=${previewUrl}>
-        <img src= ${img_url}>
+        <img alt = "image of the album ${album_name}" src= ${img_url}>
         <i class="fas play-track fa-pause" aria-hidden="true"></i>
         <div class="label">
             <h2>${song_name}</h2>
